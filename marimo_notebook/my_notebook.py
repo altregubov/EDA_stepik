@@ -1,3 +1,14 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "altair==6.0.0",
+#     "marimo>=0.21.1",
+#     "polars==1.39.3",
+#     "vegafusion==2.0.3",
+#     "vl-convert-python==1.9.0.post1",
+# ]
+# ///
+
 import marimo
 
 __generated_with = "0.21.1"
@@ -16,16 +27,21 @@ def _():
 
 @app.cell
 def _(pl):
-    df = pl.read_csv("https://raw.githubusercontent.com/aiedu-courses/stepik_eda_and_dev_tools/main/datasets/diamonds_good.csv")
+    df = (
+        pl.read_csv("https://raw.githubusercontent.com/aiedu-courses/stepik_eda_and_dev_tools/main/datasets/diamonds_good.csv")
+        .pipe(rename_df)
+    )
+    return (df,)
 
+
+@app.function
+def rename_df(dataframe):
     rename_mapping = {
         "'x'": "x",
         "'y'": "y",
         "'z'": "z",
     }
-
-    df = df.rename(rename_mapping)
-    return (df,)
+    return dataframe.rename(rename_mapping)
 
 
 @app.cell
