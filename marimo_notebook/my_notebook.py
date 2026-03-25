@@ -3,6 +3,7 @@
 # dependencies = [
 #     "altair==6.0.0",
 #     "marimo>=0.21.1",
+#     "numpy==2.4.3",
 #     "polars==1.39.3",
 #     "vegafusion==2.0.3",
 #     "vl-convert-python==1.9.0.post1",
@@ -26,7 +27,7 @@ def _():
 
 
 @app.cell
-def _(fill_medians, pl, rename_df):
+def _(fill_medians, pl):
     df = (
         pl.read_csv("https://raw.githubusercontent.com/aiedu-courses/stepik_eda_and_dev_tools/main/datasets/diamonds_good.csv")
         .pipe(rename_df)
@@ -39,18 +40,14 @@ def _(fill_medians, pl, rename_df):
     return (df,)
 
 
-app._unparsable_cell(
-    r"""
-    )def rename_df(dataframe):
-        rename_mapping = {
-            "'x'": "x",
-            "'y'": "y",
-            "'z'": "z",
-        }
-        return dataframe.rename(rename_mapping)
-    """,
-    name="*rename_df"
-)
+@app.function
+def rename_df(dataframe):
+    rename_mapping = {
+        "'x'": "x",
+        "'y'": "y",
+        "'z'": "z",
+    }
+    return dataframe.rename(rename_mapping)
 
 
 @app.cell
@@ -62,14 +59,6 @@ def _(cs, pl):
         )
 
     return (fill_medians,)
-
-
-app._unparsable_cell(
-    r"""
-    def replace(dataframe: pl.DataFrame)
-    """,
-    name="_"
-)
 
 
 @app.cell
@@ -164,7 +153,6 @@ def _(df, pl):
             pl.col("price").median().alias("PriceMedian").cast(int),
             pl.col("carat").mean().alias("CaratMean").round(1)
         ).sort("PriceMean", descending=True)
-
     return
 
 
@@ -178,18 +166,19 @@ def _(alt, df):
         facet='cut:N',
         columns=3
     )
-
     return
 
 
 @app.cell
 def _(df, pl):
+    #single correlation calculation
     df.select(pl.corr("table", "price", method="spearman"))
     return
 
 
 @app.cell
 def _(df, pl):
+    #single correlation calculation
     df.select(pl.corr("depth", "price", method="spearman"))
     return
 
@@ -210,7 +199,49 @@ def _(df, pl):
 
 
 @app.cell
-def _():
+def _(alt, cs, df, pl):
+    corr = df.select(cs.numeric()).corr()
+
+    corr_long = (
+        corr
+        .with_columns(column=pl.Series(corr.columns)) # Add a column to identify the rows
+        .unpivot(index="column")                    # Melt the data (wide to long)
+        .rename({"column": "Variable 1", "variable": "Variable 2", "value": "Correlation"})
+    )
+
+    base = alt.Chart(corr_long).encode(
+        x='Variable 1:O',
+        y='Variable 2:O'
+    )
+
+    # The Heatmap Square
+    heatmap = base.mark_rect().encode(
+        color=alt.Color('Correlation:Q', 
+                        scale=alt.Scale(scheme='redblue', domain=[-1, 1]),
+                        title="Pearson Correlation")
+    )
+
+    # The Correlation Text Labels
+    text = base.mark_text(baseline='middle').encode(
+        text=alt.Text('Correlation:Q', format='.2f'),
+        color=alt.condition(
+            alt.datum.Correlation > 0.5, 
+            alt.value('white'), 
+            alt.value('black')
+        )
+    )
+
+    # Combine and configure
+    chart = (heatmap + text).properties(
+        width=400,
+        height=400,
+        title="Correlation Matrix"
+    ).configure_axis(
+        labelFontSize=12,
+        titleFontSize=14
+    )
+
+    chart
     return
 
 
