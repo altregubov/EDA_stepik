@@ -1,0 +1,35 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.23.1",
+    "script_metadata_hash": "bf9dea91fff2f89baacc7dc615b3363b"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "59aed0f4faa77d85c005cea1346d24fd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "c22fb0200bf2cd1fdaa8345d0bf8dac2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='MJUe-0' random-id='90b9068c-a2bd-2215-5f1d-cbd38fe57773'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;carat&#92;&quot;:0.31,&#92;&quot;cut&#92;&quot;:&#92;&quot;Premium&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;G&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI1&#92;&quot;,&#92;&quot;depth&#92;&quot;:62.1,&#92;&quot;table&#92;&quot;:58.0,&#92;&quot;price&#92;&quot;:462.0,&#92;&quot;x&#92;&quot;:4.33,&#92;&quot;y&#92;&quot;:4.36,&#92;&quot;z&#92;&quot;:2.7},{&#92;&quot;carat&#92;&quot;:0.7,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;D&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI2&#92;&quot;,&#92;&quot;depth&#92;&quot;:62.4,&#92;&quot;table&#92;&quot;:58.0,&#92;&quot;price&#92;&quot;:1419.0,&#92;&quot;x&#92;&quot;:5.35,&#92;&quot;y&#92;&quot;:5.39,&#92;&quot;z&#92;&quot;:3.35},{&#92;&quot;carat&#92;&quot;:0.52,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;F&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;VS2&#92;&quot;,&#92;&quot;depth&#92;&quot;:61.1,&#92;&quot;table&#92;&quot;:56.0,&#92;&quot;price&#92;&quot;:1625.0,&#92;&quot;x&#92;&quot;:5.19,&#92;&quot;y&#92;&quot;:5.23,&#92;&quot;z&#92;&quot;:3.18},{&#92;&quot;carat&#92;&quot;:0.53,&#92;&quot;cut&#92;&quot;:&#92;&quot;Good&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;H&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI1&#92;&quot;,&#92;&quot;depth&#92;&quot;:63.9,&#92;&quot;table&#92;&quot;:55.0,&#92;&quot;price&#92;&quot;:1242.0,&#92;&quot;x&#92;&quot;:5.19,&#92;&quot;y&#92;&quot;:5.14,&#92;&quot;z&#92;&quot;:3.3},{&#92;&quot;carat&#92;&quot;:0.59,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;E&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI1&#92;&quot;,&#92;&quot;depth&#92;&quot;:61.4,&#92;&quot;table&#92;&quot;:56.0,&#92;&quot;price&#92;&quot;:1664.0,&#92;&quot;x&#92;&quot;:5.36,&#92;&quot;y&#92;&quot;:5.39,&#92;&quot;z&#92;&quot;:3.3},{&#92;&quot;carat&#92;&quot;:1.5,&#92;&quot;cut&#92;&quot;:&#92;&quot;Very Good&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;E&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI1&#92;&quot;,&#92;&quot;depth&#92;&quot;:60.4,&#92;&quot;table&#92;&quot;:59.0,&#92;&quot;price&#92;&quot;:12000.0,&#92;&quot;x&#92;&quot;:7.35,&#92;&quot;y&#92;&quot;:7.39,&#92;&quot;z&#92;&quot;:4.45},{&#92;&quot;carat&#92;&quot;:0.56,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;E&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;VS2&#92;&quot;,&#92;&quot;depth&#92;&quot;:61.6,&#92;&quot;table&#92;&quot;:57.0,&#92;&quot;price&#92;&quot;:1747.0,&#92;&quot;x&#92;&quot;:5.32,&#92;&quot;y&#92;&quot;:5.3,&#92;&quot;z&#92;&quot;:3.27},{&#92;&quot;carat&#92;&quot;:1.18,&#92;&quot;cut&#92;&quot;:&#92;&quot;Premium&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;E&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;I1&#92;&quot;,&#92;&quot;depth&#92;&quot;:62.5,&#92;&quot;table&#92;&quot;:58.0,&#92;&quot;price&#92;&quot;:3965.0,&#92;&quot;x&#92;&quot;:6.75,&#92;&quot;y&#92;&quot;:6.62,&#92;&quot;z&#92;&quot;:4.18},{&#92;&quot;carat&#92;&quot;:0.96,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;G&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;SI1&#92;&quot;,&#92;&quot;depth&#92;&quot;:63.0,&#92;&quot;table&#92;&quot;:53.0,&#92;&quot;price&#92;&quot;:4301.0,&#92;&quot;x&#92;&quot;:6.24,&#92;&quot;y&#92;&quot;:6.21,&#92;&quot;z&#92;&quot;:3.92},{&#92;&quot;carat&#92;&quot;:0.55,&#92;&quot;cut&#92;&quot;:&#92;&quot;Ideal&#92;&quot;,&#92;&quot;color&#92;&quot;:&#92;&quot;H&#92;&quot;,&#92;&quot;clarity&#92;&quot;:&#92;&quot;VVS1&#92;&quot;,&#92;&quot;depth&#92;&quot;:61.7,&#92;&quot;table&#92;&quot;:55.0,&#92;&quot;price&#92;&quot;:1845.0,&#92;&quot;x&#92;&quot;:5.27,&#92;&quot;y&#92;&quot;:5.3,&#92;&quot;z&#92;&quot;:3.27}]&quot;' data-total-rows='53786' data-total-columns='10' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;carat&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;cut&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;color&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;clarity&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;depth&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;table&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;price&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;x&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;y&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;z&quot;,[&quot;number&quot;,&quot;f64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

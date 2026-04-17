@@ -12,7 +12,7 @@
 
 import marimo
 
-__generated_with = "0.21.1"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -242,6 +242,12 @@ def _(alt, cs, df, pl):
     )
 
     chart
+    return
+
+
+@app.cell
+def _():
+    #df.write_parquet("./diamonds.parquet")
     return
 
 
